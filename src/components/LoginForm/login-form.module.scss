@@ -1,0 +1,18 @@
+@use "../../scss/variables" as v;
+@use "../../scss/media" as *;
+@use "../../scss/common";
+@use "../../scss/forms";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.errorMessage {
+  @extend %error;
+  @extend %error-message;
+
+  position: unset;
+  margin-top: 0.3rem;
+}

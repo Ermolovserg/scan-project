@@ -1,0 +1,31 @@
+// Fonts
+$font-family: 'Inter', sans-serif;
+$font-family-title: 'Ferry', sans-serif;
+
+$body-font: $font-family;
+$body-font-weight: 400;
+
+$header-font: $font-family-title;
+$header-font-weight: 900;
+
+// For REM / EM
+$basic-font-size: 62%;
+$font-size: 1.8rem;
+$line-height: 1.2;
+$letter-spacing: 0.01em;
+
+
+// Colors
+$white: #ffffff;
+$black: #000000;
+$seagreen: #029491;
+$gray: #d2d2d2;
+$primary: #7ce3e1;
+$secondary: #ffb64f;
+$accent: #5970ff;
+$green: #8ac540;
+
+// Blocks
+$bd-radius: 0.5rem;
+$margin: 2rem;
+$padding: 2rem;

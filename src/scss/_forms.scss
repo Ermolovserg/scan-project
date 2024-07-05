@@ -1,0 +1,50 @@
+@use './variables' as v;
+@use './media' as *;
+
+%input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.5rem;
+}
+
+%label {
+  padding-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+%text-input {
+  padding: 1.1rem;
+  border: 0.1rem solid #c7c7c7;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.05);
+  border-radius: v.$bd-radius;
+}
+
+%error {
+  @extend %text-input;
+  
+  input[type='text'],
+  input[type='password'] {
+    color: #ff5959;
+  }
+
+  &-message {
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-align: center;
+    color: #ff5959;
+  }
+}
+
+::placeholder {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.03em;
+  color: #949494;
+  text-align: center;
+  opacity: 0.4;
+}

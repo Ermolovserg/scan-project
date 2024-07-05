@@ -1,0 +1,39 @@
+@use "../../scss/media" as *;
+@use "../../scss/common";
+
+.login {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: url("../../assets/images/bg-login.svg") no-repeat left 18% bottom 70px;
+  background-size: 26%;
+
+  @include media-max-width($md) {
+    padding-top: 2rem;
+    padding-bottom: 90%;
+    background-size: 70%;
+    background-position: center bottom 5%;
+  }
+}
+
+.title {
+  width: 57%;
+  font-size: 4rem;
+
+  &.title {
+    @extend %section-title;
+
+    @include media-max-width($lg) {
+      width: 48%;
+    }
+
+    @include media-max-width($md) {
+      width: 100%;
+      margin-bottom: 7rem;
+    }
+  }
+}

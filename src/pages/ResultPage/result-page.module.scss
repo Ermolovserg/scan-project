@@ -1,0 +1,43 @@
+@use '../../scss/common';
+@use '../../scss/general';
+@use '../../scss/variables' as v;
+@use '../../scss/media' as *;
+
+.result {
+  min-height: 42rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background: url("../../assets/images/bg-result.svg") no-repeat right 4rem bottom 2.5rem;
+  background-size: 40%;
+
+  @include media-max-width($md) {
+    padding-bottom: 65%;
+    background-size: 90%;
+    background-position: center bottom;
+  }
+}
+
+.title {
+  font-size: 3rem;
+  width: 37%;
+  margin-bottom: 3rem;
+}
+
+h1.title {
+  font-size: 4rem;
+}
+
+.subtitle {
+  width: 35%;
+  font-size: 2rem;
+
+  @include media-max-width($md) {
+    width: 70%;
+    font-size: 1.8rem;
+  }
+}
+
+.result-info {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}

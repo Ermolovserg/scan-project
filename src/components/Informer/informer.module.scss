@@ -1,0 +1,61 @@
+@use "../../scss/variables" as v;
+@use "../../scss/media" as *;
+@use "../../scss/common";
+
+.informer {
+  padding: 1.4rem .8rem;
+  background-color: #d9d9d94d;
+  border-radius: v.$bd-radius;
+  text-align: right;
+
+  width: 17.5rem;
+  min-height: 6.3rem;
+
+  flex-shrink: 0;
+  font-size: 1rem;
+  color: transparentize(v.$black, 0.4);
+
+  position: relative;
+
+  @include media-max-width($md) {
+    order: -1;
+  }
+
+  @include media-max-width($sm) {
+    width: 13.2rem;
+    padding: .8rem;
+    font-size: .8rem;
+    text-align: left;
+  }
+}
+
+.text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include media-max-width($sm) {
+    &:not(:last-of-type) {
+      margin-bottom: .8rem;
+    }
+  }
+}
+
+%num {
+  display: inline-block;
+  min-width: 2.7rem;
+  margin-left: .6rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-align: left;
+  transform: translateY(11%);
+}
+
+.num {
+  @extend %num;
+  color: v.$black;
+}
+
+.num-color {
+  @extend %num;
+  color: v.$green;
+}

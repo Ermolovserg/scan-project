@@ -1,0 +1,64 @@
+@use "../../scss/media" as *;
+@use "../../scss/common";
+
+.search {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/bg-search.svg"), url("../../assets/images/document.svg"), url("../../assets/images/folders.svg");
+  background-position: right bottom 7rem, top 15% right 30%, top 15% right;
+  background-size: 30%, auto, auto;
+
+  @include media-max-width($xxl) {
+    background-position: right bottom 7rem, top 15% right 10%, top 55% right 1%;
+    background-size: 14%, auto, auto;
+  }
+
+  @include media-max-width($xl) {
+    background-position: right bottom 7rem, top 15% right 30%, top 15% right;
+    background-size: 0, auto, auto;
+  }
+
+  @include media-max-width($md) {
+    background-position: center bottom, top 15% right, top 15% right;
+    background-size: 85%, auto, 0;
+    padding-bottom: 100%;
+  }
+
+  .form {
+    @include media-max-width($lg) {
+      width: 100%;
+    }
+  }
+}
+
+.title {
+  width: 60%;
+  margin-bottom: 4rem;
+  font-size: 4rem;
+
+  &.title {
+    @extend %section-title;
+
+    @include media-max-width($lg) {
+      width: 48%;
+    }
+
+    @include media-max-width($md) {
+      width: 100%;
+      margin-bottom: 7rem;
+    }
+  }
+}
+
+.subtitle {
+  width: 60%;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+
+  @include media-max-width($md) {
+    font-size: 1.8rem;
+  }
+}
+

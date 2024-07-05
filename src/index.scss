@@ -1,0 +1,9 @@
+@use "scss-reset/reset.scss";
+@use "./scss/fonts";
+@use "scss/general";
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }

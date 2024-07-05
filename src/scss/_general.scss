@@ -1,0 +1,93 @@
+@use "./variables" as v;
+@use "./common";
+
+html,
+body {
+  font-family: v.$body-font;
+  font-weight: v.$body-font-weight;
+}
+
+html {
+  font-size: v.$basic-font-size;
+}
+
+body {
+  color: v.$black;
+  font-size: v.$font-size;
+  line-height: v.$line-height;
+  letter-spacing: v.$letter-spacing;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+}
+
+h1,h2 {
+  font-family: v.$header-font;
+  font-weight: 900;
+}
+
+h3 {
+  font-family: v.$body-font;
+  font-weight: 500;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: v.$black;
+}
+
+a, button {
+  color: v.$black;
+  text-decoration: none;
+
+  &:visited {
+    text-decoration: none;
+    outline: 0;
+  }
+
+  &:focus,
+  &:active {
+    text-decoration: underline;
+    outline: 0;
+  }
+
+  @extend %hover;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.br {
+  display: block;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}

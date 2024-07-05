@@ -1,0 +1,32 @@
+@use "../../scss/variables" as v;
+@use "../../scss/common";
+
+.footer {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: v.$seagreen;
+}
+
+.wrap {
+  @extend %container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: v.$white;
+  font-size: 1.2rem;
+
+  &:last-child {
+    text-align: right;
+  }
+}
+
+.contacts {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+}

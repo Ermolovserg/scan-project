@@ -1,0 +1,71 @@
+@use "../../scss/variables" as v;
+@use "../../scss/media" as *;
+@use "../../scss/common";
+
+%btn {
+  display: inline-block;
+  line-height: inherit;
+  letter-spacing: 0.02em;
+  padding: 1rem;
+  color: inherit;
+  border-radius: v.$bd-radius;
+  text-align: center;
+  @extend %hover;
+}
+
+.btn {
+  @extend %btn;
+
+  &-small {
+    @extend %btn;
+    padding: 1.7rem 3rem;
+    font-size: 2rem;
+
+    @include media-max-width($xs) {
+      width: 100%;
+      font-size: 1.8rem;
+    }
+  }
+
+  &-big {
+    @extend %btn;
+    font-weight: 500;
+    padding: 1.6rem 3rem;
+    font-size: 2.2rem;
+
+    @include media-max-width($xs) {
+      width: 100%;
+      font-size: 2rem;
+    }
+  }
+
+  &-soc {
+    @extend %btn;
+    width: 9.6rem;
+    height: 3.1rem;
+    border: 0.1rem solid rgba(89, 112, 255, 0.51);
+    border-radius: 0.3rem;
+    padding: 0;
+
+    & > svg {
+      display: block;
+      margin: auto;
+      height: 1.8rem;
+    }
+  }
+}
+
+.primary {
+  color: v.$black;
+  background-color: v.$primary;
+}
+
+.accent {
+  color: v.$white;
+  background-color: v.$accent;
+}
+
+.gray {
+  color: v.$black;
+  background-color: v.$gray;
+}

@@ -1,0 +1,69 @@
+@use "../../scss/variables" as v;
+@use "../../scss/media" as *;
+@use "../../scss/common";
+
+.map {
+  width: 42.9rem;
+  color: #949494;
+  padding: 2.5rem;
+  font-size: 1.6rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+  border-radius: v.$bd-radius*2;
+  position: relative;
+
+  &::before {
+    content: url("../../assets/images/lock.svg");
+    display: block;
+    width: 7.5rem;
+    height: 9.2rem;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+
+    @include media-max-width($md) {
+      top: -75px;
+      left: 75px;
+    }
+  }
+
+  @include media-max-width($xl) {
+    width: 35.5rem;
+  }
+
+  @include media-max-width($lg) {
+    width: 32.3rem;
+  }
+
+  @include media-max-width($md) {
+    width: 100%;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 1.0rem;
+  justify-content: space-between;
+  margin-bottom: 4.0rem;
+  text-align: center;
+
+  a {
+    flex-grow: 1;
+    padding-bottom: .8rem;
+    color: #c7c7c7;
+    text-decoration: none;
+
+    &:first-of-type {
+      color: v.$seagreen;
+      border-bottom: .2rem solid v.$seagreen;
+      pointer-events: none;
+    }
+
+    @extend %hover;
+  }
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}

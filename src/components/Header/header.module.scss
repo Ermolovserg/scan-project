@@ -1,0 +1,37 @@
+@use "../../scss/variables" as v;
+@use "../../scss/media" as *;
+@use "../../scss/common";
+
+.header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  @extend %container;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  background-color: v.$white;
+  &.opened {
+    background-color: v.$seagreen;
+  }
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 66%;
+
+  @include media-max-width($lg) {
+    width: 75%;
+  }
+
+  @include media-max-width($md) {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-right: 15%;
+  }
+}

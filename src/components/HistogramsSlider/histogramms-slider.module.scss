@@ -1,0 +1,50 @@
+@use '../../scss/media' as *;
+@use '../../scss/variables' as v;
+
+.wrap {
+  position: relative;
+  padding-top: 6.6rem;
+
+  @include media-min-width($sm) {
+    padding-top: 0;
+  }
+}
+
+.titles {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: v.$white;
+  background-color: v.$seagreen;
+  border: 0.2rem solid v.$seagreen;
+  border-radius: 1rem 1rem 0 0;
+
+  @include media-min-width($sm) {
+    left: 3.5rem;
+    flex-direction: column;
+    max-width: 13rem;
+    border-radius: 1rem 0 0 1rem;
+  }
+}
+
+.title {
+  width: 33%;
+  text-align: center;
+
+  @include media-min-width($sm) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &:not(:last-child) {
+    @include media-min-width($sm) {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

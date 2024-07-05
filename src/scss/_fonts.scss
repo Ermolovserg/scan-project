@@ -1,0 +1,14 @@
+@mixin font($fname, $fstyle, $fweight, $furl, $fdisplay: swap) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format("woff2");
+    font-display: $fdisplay;
+  }
+}
+
+@include font("Inter", normal, 400, "../assets/fonts/inter-v12-latin_cyrillic-regular.woff2");
+@include font("Inter", normal, 500, "../assets/fonts/inter-v12-latin_cyrillic-500.woff2");
+@include font("Inter", normal, 700, "../assets/fonts/inter-v12-latin_cyrillic-700.woff2");
+@include font("Ferry", normal, 900, "../assets/fonts/ferry-black.woff2");

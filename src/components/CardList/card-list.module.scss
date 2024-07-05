@@ -1,0 +1,11 @@
+@use "../../scss/media" as *;
+
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+
+  @include media-max-width($xxl) {
+    flex-wrap: wrap;
+  }
+}
